@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>福地</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Cache-Control" content="must-revalidate, no-cache, no-store">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+    <style>
+        *, *:before, *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        /** 全局reset **/
+        body, header, footer, section, div, span, p, img, a, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, em, i, b, u, del, menu, nav, fieldset, legend, article, aside, details, figcaption, hgroup, pre, code, from, blockquote, th, td, tr, hr, table, img, figure, button, input, textarea {
+            padding: 0;
+            margin: 0;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-text-size-adjust: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            font-family: Microsoft Yahei, Helvetica, Arial;
+        }
+        body {
+            background-color: #f6f6f6;
+        }
+        body {
+            padding: 0;
+            min-width: 300px;
+            max-width: 640px;
+            margin: 0 auto;
+
+        }
+
+
+        /* webkit引擎的浏览器取消默认样式(-webkit-appearance) */
+        input, textarea {
+            -webkit-user-select: auto !important;
+            user-select: auto !important; /*-webkit-appearance:none;*/
+        }
+        :focus {
+            outline: none;
+        }
+        img {
+            vertical-align: middle;
+            border: 0 none;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        section {
+            display: block;
+            margin: 0 auto;
+        }
+        header, footer {
+            margin: 0 auto;
+            width: 100%;
+        }
+        em, i {
+            font-style: normal;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        button, input {
+            border: 0 none;
+        }
+        u, del {
+            text-decoration: none;
+        }
+        /* webkit引擎的浏览器取消默认样式 */
+        input[type="submit"], input[type="reset"], input[type="button"], input[type="password"], input[type="text"], input[type="search"], input[type="number"], button {
+            -webkit-appearance: none;
+            outline: none;
+        }
+        body {
+            padding: 0;
+            min-width: 300px;
+            max-width: 640px;
+            margin: 0 auto;
+            position: relative;
+        }
+        /*首页头部样式*/
+
+        .header {
+        }
+        .header h1.logo {
+            font-size: 24px;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            background-color: #fff;
+            font-weight: bold;
+        }
+        .header h1 .h1text {
+            /*font-size: 24px;*/
+            color: #000;
+        }
+        .red {
+            color: red;
+        }
+        /*banner部分*/
+        .banner {
+            /*height: 177px;*/
+        }
+        .banner a {
+            display: block;
+            /*height: 177px;*/
+        }
+        .banner a img {
+            display: block;
+            max-height: 100%;
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+            /*width: auto;*/
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .subitem1 {
+            background-color: #fff;
+            margin-top: 12px;
+        }
+        .subitem1 ul {
+            border-top: 1px solid #d8d8d8;
+            border-bottom: 1px solid #d8d8d8;
+        }
+        .subitem1 ul li+li {
+            border-top: 1px solid #d8d8d8;
+        }
+        .subitem1 ul li {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+        .subitem1 ul a {
+            display: inline-block;
+            display: table-cell;
+            width: 50%;
+            height: 90px;
+            vertical-align: middle;/*padding-top: 10px;*//*padding-bottom: 10px;*/
+        }
+        .subitem1 ul a img {
+            /*max-height: 100%;*/
+            /*max-width: 100%;*/
+            /*width: auto;*/
+            width: 50px;
+            /*width: 82px;*/
+            /*height: 68px;*/
+            height: auto;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .subitem1 ul a span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .subitem1 ul a h5 {
+            font-size: 15px;
+            color: #000;
+        }
+        .subitem1 ul a small {
+            font-size: 13px;
+            color: #7c7c7c;
+        }
+        .tuijian {
+            border-bottom: 1px solid #d8d8d8;
+            background-color: #fff;
+            margin-bottom: 12px;
+            padding: 1em;
+            /* 暂时隐藏 */
+            display: none;
+        }
+        .tuijian h4 {
+            font-size: 15px;
+            color: #000;
+        }
+        .tuijian small {
+            font-size: 13px;
+            color: #7c7c7c;
+            display: block;
+            margin-left: 1.5em;
+        }
+        .tuijian ul {
+            display: table;
+            width: 90%;
+            table-layout: fixed;
+        }
+        .tuijian ul li {
+            display: table-cell;
+            width: 50%;
+            /*height: 90px;*/
+            vertical-align: middle;
+            width: 40%;
+        }
+        .tuijian ul li.vs {
+            width: 20%;
+        }
+        .tuijian ul {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+        .guojia1 {
+        }
+        .guojia2 {
+            text-align: right;
+        }
+        .footer1 {
+            position: fixed;
+            height: 46px;
+            z-index: 28;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #d8d8d8;
+            background-color: #fff;
+            padding: 0;
+            min-width: 300px;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .footer1 a {
+            float: left;
+            width: 20%;
+            padding-bottom: 1px;
+            padding-top: 1px;
+            text-align: center;/*background-color: red;*/
+        }
+        .footer1 a img{
+            height: 42px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+<style>
+    .movcontent{
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        min-width: 320px;
+
+    }
+    #mov{
+        border: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #headermov{
+        /*text-align: center;*/
+        background-color: #fff;
+    }
+    #headermov .logo{
+        /*display: inline-block;*/
+        width: 160px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    #headermov .gohome-a{
+        float: left;
+        height: 44px;
+        line-height: 44px;
+        margin-left: 1em;
+
+    }
+
+</style>
+
+
+<div class="movcontent">
+    <iframe src="http://m.188fd.com/html/home.index.html" frameborder="0" name="mov" id="mov"></iframe>
+</div>
+
+
+
+
+
+</body>
+</html>
